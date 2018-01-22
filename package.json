@@ -1,6 +1,6 @@
 {
   "name": "vue-common-styles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
@@ -16,7 +16,10 @@
     "not ie <= 8"
   ],
   "repository": "https://github.com/jacobsun/vue-common-styles.git",
-  "keywords": ["vue","component"],
+  "keywords": [
+    "vue",
+    "component"
+  ],
   "bugs": {
     "url": "https://github.com/jacobsun/vue-common-styles/issues"
   },
