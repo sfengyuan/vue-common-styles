@@ -5,7 +5,7 @@
     }],
     ["stage-3"]
   ],
-  "plugins": ["transform-runtime", "transform-object-rest-spread"],
+  "plugins": ["transform-runtime"],
   "env": {
     "test": {
       "presets": ["env", "stage-3"]}
