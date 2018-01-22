@@ -1,7 +1,7 @@
 {
   "name": "vue-common-styles",
   "version": "1.0.2",
-  "main": "src/index.js",
+  "main": "dist/vcstyles.min.js",
   "license": "MIT",
   "scripts": {
     "prepare": "yarn test",

@@ -5,7 +5,7 @@
     }],
     ["stage-3"]
   ],
-  "plugins": ["babel-plugin-transform-runtime"],
+  "plugins": ["transform-runtime"],
   "env": {
     "test": {
       "presets": ["env", "stage-3"]}
