@@ -78,7 +78,6 @@
     }
   },
   "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "vue": "^2.5.13"
   }
 }
