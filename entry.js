@@ -46,7 +46,7 @@ new Vue({
       this.$notify('Info message', 'info', {permanent: true})
     },
     error () {
-      this.$notify('Error message', 'error')
+      this.$notify('Long long Long long Long long Long long Error message', 'error')
     },
     primary () {
       this.$notify('Primary message', 'primary')
@@ -55,7 +55,7 @@ new Vue({
       this.$alert('Info message', 'info', {permanent: true})
     },
     alert_error () {
-      this.$alert('Error message', 'error')
+      this.$alert('Long long Long long Long long Long long Error message', 'error', {width: 500})
     },
     alert_primary () {
       this.$alert('Primary message', 'primary')

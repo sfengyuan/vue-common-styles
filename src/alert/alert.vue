@@ -1,11 +1,11 @@
 <template>
-  <div class="alert">
+  <div class="alert" ref="alert">
     <transition-group name="alert" tag="div">
       <div v-for="(item, key) in items"
         :key="key"
         :class="'alert-item-' + item.type"
         class="alert-item"
-        :style="'width:' + item.options.width"
+        :style="'width:' + options.width + 'px'"
       >
         <span class="alert-icon" :class="'alert-icon-' + item.type"></span>
         <span class="alert-text">{{ item.msg }}</span>
@@ -29,14 +29,14 @@ export default {
         duration: 500,
         visibility: 2000,
         permanent: false,
-        width: '300px'
+        width: '300'
       },
       items: {}
     }
   },
   methods: {
     add (msg, type = 'info', options) {
-      const opt = {...this.options, ...options}
+      const opt = Object.assign({}, this.options, options)
       const id = new Date().getTime()
 
       Vue.set(this.items, id, {type, msg, options: opt})
@@ -47,23 +47,26 @@ export default {
     remove (id) {
       Vue.delete(this.items, id)
     }
+  },
+  mounted () {
+    const alert = this.$refs.alert
+    alert.style.left = ((window.innerWidth - this.options.width) / 2) + 'px'
   }
 }
 </script>
 <style lang="stylus">
   .alert
+    // transition all
     position fixed
     top 0
-    left 0
-    right 0
-    z-index 9000
+    z-index 9999
   .alert-item
+    position relative
     margin 5px auto
     padding 15px
     border-radius 3px
     color #fff
     box-shadow 0px 3px 3px 0px rgba(0,0,0,0.3)
-    position relative
   .alert-text
     text-shadow 1px 1px 0px rgba(0,0,0,0.2)
   .alert-close
@@ -109,6 +112,4 @@ export default {
     opacity 0
   .alert-leave-active
     position absolute
-    left 50%
-    transform translateX(-50%)
 </style>
