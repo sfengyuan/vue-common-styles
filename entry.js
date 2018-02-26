@@ -24,7 +24,6 @@ new Vue({
     </div>
     <cs-modal
       :active="modalStatus"
-      :options="options"
       @cancel="onCancel"
       @confirm="onConfirm"
     >
