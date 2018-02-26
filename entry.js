@@ -24,6 +24,7 @@ new Vue({
     </div>
     <cs-modal
       :active="modalStatus"
+      :options="options"
       @cancel="onCancel"
       @confirm="onConfirm"
     >
@@ -35,7 +36,11 @@ new Vue({
   `,
   data () {
     return {
-      modalStatus: false
+      modalStatus: false,
+      options: {
+        confirmText: '登录',
+        cancelText: '取消'
+      }
     }
   },
   methods: {
