@@ -4,7 +4,7 @@
       <div key="mask" class="mask" v-show="isShow" @click="clickMask"></div>
       <div key="modal" class="modal" v-show="isShow" ref="modal">
         <header class="header" v-if="!opt.noHeader">
-          {{ opt.title }}
+          <slot name="header"></slot>
         </header>
         <main class="body">
           <slot>Use slot to pass content to modal.</slot>
@@ -24,7 +24,7 @@
           </button>
         </div>
         <footer class="footer" v-if="!opt.noFooter">
-          {{ opt.footer }}
+          <slot name="footer"></slot>
         </footer>
       </div>
     </transition-group>
@@ -54,9 +54,7 @@ export default {
         noCancel: false,
         noConfirm: false,
         cancelText: 'Cancel',
-        confirmText: 'Confirm',
-        title: 'Tip',
-        footer: 'Check this out.'
+        confirmText: 'Confirm'
       }
       return Object.assign({}, defaults, this.options)
     }

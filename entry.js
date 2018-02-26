@@ -27,17 +27,15 @@ new Vue({
       @cancel="onCancel"
       @confirm="onConfirm"
     >
+      <h1 slot="header">Question</h1>
       <div>Do you like it?</div>
+      <p slot="footer">It's up to <em>you</em>.</p>
     </cs-modal>
   </div>
   `,
   data () {
     return {
-      modalStatus: false,
-      options: {
-        title: 'Question',
-        footer: `It's up to you.`
-      }
+      modalStatus: false
     }
   },
   methods: {
