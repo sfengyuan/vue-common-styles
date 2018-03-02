@@ -61,14 +61,16 @@ export default {
   },
   methods: {
     onClick (btn) {
-      this.close(btn)
+      this.$emit(btn)
+      if (btn === 'cancel') {
+        this.close(btn)
+      }
     },
     close (btn) {
       this.isShow = false
-      this.$emit(btn)
     },
     clickMask () {
-      if (!this.options.noCancel) {
+      if (this.options.noCancel) {
         this.close('cancel')
       }
     },
