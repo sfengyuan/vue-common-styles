@@ -100,12 +100,13 @@ export default {
 </script>
 <style lang="stylus">
 .cs-modal
+  z-index 9999
   position fixed
   top 0
   left 0
   right 0
   .mask
-    z-index 2000
+    z-index 9999
     transition opacity 500ms ease
     background #333
     opacity .5
@@ -120,7 +121,7 @@ export default {
     position relative
     max-width 350px
     margin 30px auto
-    z-index 9999
+    z-index 99999
     background #FFF
     border-radius 3px
   .header
