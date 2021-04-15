@@ -6,7 +6,7 @@ Alert, notification and modal component.
 
 [Demo Link][1]
 
-[1]:https://jacobsun.github.io/vue-common-styles/
+[1]:https://sfengyuan.github.io/vue-common-styles/
 
 ## Install
 
